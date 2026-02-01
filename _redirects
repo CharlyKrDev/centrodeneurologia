@@ -1,7 +1,8 @@
 # Cloudflare Pages Redirects
-# Redirect sin www a con www
-https://centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301
+# Solo URLs relativas permitidas
 
-# Force HTTPS (Cloudflare lo hace automático, pero por si acaso)
-http://www.centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301
-http://centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301
+# Redirect trailing slashes
+/*/ /:splat 301
+
+# Si necesitas más redirects específicos, usa formato relativo:
+# /old-page /new-page 301
