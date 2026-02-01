@@ -1,0 +1,7 @@
+# Cloudflare Pages Redirects
+# Redirect sin www a con www
+https://centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301
+
+# Force HTTPS (Cloudflare lo hace automático, pero por si acaso)
+http://www.centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301
+http://centrodeneurologia.com.ar/*  https://www.centrodeneurologia.com.ar/:splat  301

@@ -1,0 +1,25 @@
+{
+  "name": "Centro de Neurología Venado Tuerto",
+  "short_name": "Centro Neurología",
+  "description": "Centro especializado en neurología y neurocirugía. Dr. Daniel Montanaro. Estudios de neurofisiología y tratamientos especializados.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d9488",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./images/favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["health", "medical"],
+  "lang": "es-AR"
+}
