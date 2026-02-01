@@ -1,8 +1,0 @@
-# Cloudflare Pages Redirects
-# Solo URLs relativas permitidas
-
-# Redirect trailing slashes
-/*/ /:splat 301
-
-# Si necesitas más redirects específicos, usa formato relativo:
-# /old-page /new-page 301
