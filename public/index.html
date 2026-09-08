@@ -187,9 +187,7 @@
         ]
       }
     </script>
-    <script src="./analytics-events.js" defer>
-      
-    </script>
+    <script src="./analytics-events.js" defer></script>
   </head>
 
   <body
@@ -208,7 +206,7 @@
           aria-label="Centro de Neurología - Inicio"
         >
           <img
-            src="./images/isotipo.png"
+            src="./images/isotipo-80.webp"
             alt="Centro de Neurología Venado Tuerto"
             class="h-10 w-10 shrink-0 rounded-xl"
             width="40"
@@ -256,10 +254,16 @@
     <main id="inicio">
       <!-- HERO -->
       <section class="relative isolate overflow-hidden">
-        <div
-          class="absolute inset-0 -z-20 bg-[url('./images/hero-background.webp')] bg-cover bg-center"
+        <img
+          src="./images/hero-background.webp"
+          alt=""
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          class="absolute inset-0 -z-20 h-full w-full object-cover object-center"
           aria-hidden="true"
-        ></div>
+        />
+
         <div
           class="absolute inset-0 -z-10 bg-gradient-to-b from-white/80 via-slate-50/85 to-slate-50"
           aria-hidden="true"
@@ -839,15 +843,40 @@
             </div>
 
             <div
-              class="overflow-hidden rounded-3xl bg-slate-50 p-2 ring-1 ring-slate-200"
+              class="flex min-h-80 flex-col items-center justify-center rounded-3xl bg-slate-50 p-6 text-center ring-1 ring-slate-200 sm:min-h-96"
             >
-              <iframe
-                title="Mapa del Centro de Neurología en Pellegrini 931, Venado Tuerto"
-                src="https://www.google.com/maps?q=Pellegrini%20931,%20Venado%20Tuerto,%20Santa%20Fe,%20Argentina&output=embed"
-                class="h-80 w-full rounded-2xl sm:h-96"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-teal-100 text-teal-700"
+                aria-hidden="true"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  class="h-7 w-7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+
+              <h3 class="mt-4 text-xl font-extrabold text-slate-950">
+                Cómo llegar
+              </h3>
+
+              <p class="mt-2 max-w-sm text-slate-600">
+                Centro de Neurología · Pellegrini 931 · Venado Tuerto, Santa Fe.
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Pellegrini+931,+Venado+Tuerto,+Santa+Fe,+Argentina"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex min-h-12 items-center justify-center rounded-xl bg-teal-600 px-5 py-3 font-extrabold text-white transition hover:bg-teal-700"
+              >
+                Abrir en Google Maps
+              </a>
             </div>
           </div>
         </div>
