@@ -1,8 +1,23 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("/fonts/great-vibes.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Ajustes mínimos globales para la landing */
 @layer base {
   summary::-webkit-details-marker {
     display: none;
