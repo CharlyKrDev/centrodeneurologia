@@ -304,6 +304,26 @@
 }
 </script>
     <script src="./analytics-events.js" defer></script>
+    <script>
+      (() => {
+        const openTargetDetails = () => {
+          if (!window.location.hash) return;
+          const target = document.querySelector(window.location.hash);
+          if (target && target.tagName === "DETAILS") target.open = true;
+        };
+
+        document.addEventListener("click", (event) => {
+          const link = event.target.closest('a[href^="#"]');
+          if (!link) return;
+          const target = document.querySelector(link.getAttribute("href"));
+          if (target && target.tagName === "DETAILS") target.open = true;
+        });
+
+        window.addEventListener("hashchange", openTargetDetails);
+        openTargetDetails();
+      })();
+    </script>
+
   </head>
 
   <body
@@ -427,30 +447,12 @@
             <div
               class="mt-8 flex flex-wrap gap-2 text-sm font-semibold text-slate-700"
             >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >EEG</span
-              >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >EMG</span
-              >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >Potenciales evocados</span
-              >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >Video-EEG</span
-              >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >Tratamiento del dolor</span
-              >
-              <span
-                class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200"
-                >Ozonoterapia</span
-              >
+              <a href="#eeg" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">EEG</a>
+              <a href="#emg" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">EMG</a>
+              <a href="#potenciales-evocados" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">Potenciales evocados</a>
+              <a href="#video-eeg" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">Video-EEG</a>
+              <a href="#tratamiento-dolor" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">Tratamiento del dolor</a>
+              <a href="#ozonoterapia" class="rounded-full bg-white/90 px-3 py-1.5 ring-1 ring-slate-200 transition hover:bg-white hover:text-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500">Ozonoterapia</a>
             </div>
           </div>
 
@@ -547,7 +549,7 @@
 
           <div class="mt-8 grid gap-4 lg:grid-cols-2">
             <!-- EEG -->
-            <details
+            <details id="eeg"
               class="group rounded-2xl border border-slate-200 bg-slate-50 open:bg-white open:shadow-sm"
             >
               <summary
@@ -592,7 +594,7 @@
             </details>
 
             <!-- EMG -->
-            <details
+            <details id="emg"
               class="group rounded-2xl border border-slate-200 bg-slate-50 open:bg-white open:shadow-sm"
             >
               <summary
@@ -636,7 +638,7 @@
             </details>
 
             <!-- Potenciales -->
-            <details
+            <details id="potenciales-evocados"
               class="group rounded-2xl border border-slate-200 bg-slate-50 open:bg-white open:shadow-sm"
             >
               <summary
@@ -769,7 +771,7 @@
             </details>
 
             <!-- Video EEG -->
-            <details
+            <details id="video-eeg"
               class="group rounded-2xl border border-teal-200 bg-teal-50/50 open:bg-white open:shadow-sm"
             >
               <summary
@@ -840,7 +842,7 @@
           </div>
 
           <div class="mt-8 grid gap-5 md:grid-cols-2">
-            <article
+            <article id="tratamiento-dolor"
               class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
             >
               <div class="flex items-center gap-3">
@@ -869,7 +871,7 @@
               </ul>
             </article>
 
-            <article
+            <article id="ozonoterapia"
               class="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
             >
               <div class="flex items-center gap-3">
