@@ -88,131 +88,133 @@
     <!-- Tailwind compilado para producción -->
     <link rel="stylesheet" href="./styles.css" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "MedicalBusiness",
-            "@id": "https://www.centrodeneurologia.com.ar/#centro",
-            "name": "Centro de Neurología Venado Tuerto",
-            "url": "https://www.centrodeneurologia.com.ar/",
-            "description": "Centro de neurología y neurofisiología en Venado Tuerto, Santa Fe.",
-            "image": "https://www.centrodeneurologia.com.ar/images/isotipo.png",
-            "logo": "https://www.centrodeneurologia.com.ar/images/isotipo.png",
-            "telephone": "+54-3462-427798",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Pellegrini 931",
-              "addressLocality": "Venado Tuerto",
-              "addressRegion": "Santa Fe",
-              "postalCode": "2600",
-              "addressCountry": "AR"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": -33.7469,
-              "longitude": -61.9689
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Venado Tuerto"
-              },
-              {
-                "@type": "AdministrativeArea",
-                "name": "Santa Fe"
-              }
-            ],
-            "medicalSpecialty": [
-              "Neurología",
-              "Neurocirugía",
-              "Neurofisiología"
-            ],
-            "sameAs": ["https://www.instagram.com/centroneurologia_/"]
-          },
-          {
-            "@type": "Physician",
-            "@id": "https://www.centrodeneurologia.com.ar/#dr-daniel-montanaro",
-            "name": "Dr. Daniel Montanaro",
-            "jobTitle": "Neurocirujano",
-            "identifier": "Mat. 9353",
-            "telephone": "+54-3462-427798",
-            "worksFor": {
-              "@id": "https://www.centrodeneurologia.com.ar/#centro"
-            }
-          },
-          {
-            "@type": "ItemList",
-            "name": "Estudios de Neurofisiología",
-            "itemListElement": [
-              {
-                "@type": "MedicalProcedure",
-                "position": 1,
-                "name": "Electroencefalograma (EEG)",
-                "description": "Registro de la actividad eléctrica cerebral."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 2,
-                "name": "Electromiografía (EMG)",
-                "description": "Evaluación de nervios periféricos y actividad muscular."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 3,
-                "name": "Potenciales Evocados",
-                "description": "Registro de respuestas del sistema nervioso ante estímulos específicos."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 4,
-                "name": "Mapeo Cerebral",
-                "description": "Registro y análisis de patrones de actividad cerebral."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 5,
-                "name": "Videonistagmografía",
-                "description": "Evaluación del equilibrio y del sistema vestibular mediante registro de movimientos oculares."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 6,
-                "name": "Videoelectroencefalograma (Video-EEG)",
-                "description": "Registro EEG sincronizado con video."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 7,
-                "name": "Tratamiento del Dolor",
-                "description": "Tratamiento de hernias de disco, síndrome de túnel carpiano y dolor de hombros, caderas y rodillas."
-              },
-              {
-                "@type": "MedicalProcedure",
-                "position": 8,
-                "name": "Ozonoterapia",
-                "description": "Tratamiento de herpes zóster, artritis, artrosis y patologías de nervios periféricos."
-              },
+<!-- Structured Data -->
+<script type="application/ld+json">
 {
-                "@type": "MedicalProcedure",
-                "position": 9,
-                "name": "Ozono terapia",
-                "description": "Tratamiento de herpes zóster, artritis, artrosis y patologías de nervios periféricos."
-              }
-            ]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://www.centrodeneurologia.com.ar/#website",
-            "url": "https://www.centrodeneurologia.com.ar/",
-            "name": "Centro de Neurología",
-            "alternateName": "Centro de Neurología Venado Tuerto"
-          }
-        ]
-      }
-    </script>
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.centrodeneurologia.com.ar/#centro",
+      "name": "Centro de Neurología Venado Tuerto",
+      "alternateName": "Centro de Neurología y Neurofisiología Venado Tuerto",
+      "url": "https://www.centrodeneurologia.com.ar/",
+      "description": "Centro de neurología, neurocirugía y neurofisiología en Venado Tuerto, Santa Fe. Estudios de EEG, EMG, potenciales evocados, videonistagmografía y tratamientos como ozonoterapia y tratamiento del dolor.",
+      "image": "https://www.centrodeneurologia.com.ar/images/isotipo.png",
+      "logo": "https://www.centrodeneurologia.com.ar/images/isotipo.png",
+      "telephone": "+54-3462-427798",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Pellegrini 931",
+        "addressLocality": "Venado Tuerto",
+        "addressRegion": "Santa Fe",
+        "postalCode": "2600",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -33.7469,
+        "longitude": -61.9689
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Venado Tuerto" },
+        { "@type": "AdministrativeArea", "name": "Santa Fe" }
+      ],
+      "medicalSpecialty": ["Neurologic", "Surgical"],
+      "sameAs": ["https://www.instagram.com/centroneurologia_/"]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.centrodeneurologia.com.ar/#dr-daniel-montanaro",
+      "name": "Dr. Daniel Montanaro",
+      "jobTitle": "Neurocirujano",
+      "identifier": "Mat. 9353",
+      "telephone": "+54-3462-427798",
+      "worksFor": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.centrodeneurologia.com.ar/#estudios",
+      "name": "Estudios y tratamientos de neurología y neurofisiología",
+      "itemListElement": [
+        {
+          "@type": "MedicalProcedure",
+          "position": 1,
+          "name": "Electroencefalograma (EEG)",
+          "alternateName": ["EEG", "Electroencefalograma"],
+          "description": "Registro de la actividad eléctrica cerebral.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "position": 2,
+          "name": "Electromiografía (EMG)",
+          "alternateName": ["EMG", "Electromiograma"],
+          "description": "Evaluación de nervios periféricos y actividad muscular.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "position": 3,
+          "name": "Potenciales Evocados",
+          "alternateName": ["Potenciales evocados visuales", "Potenciales evocados auditivos", "PEV", "PEA"],
+          "description": "Registro de respuestas del sistema nervioso ante estímulos específicos.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "position": 4,
+          "name": "Mapeo Cerebral",
+          "alternateName": ["Brain mapping"],
+          "description": "Registro y análisis de patrones de actividad cerebral.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "position": 5,
+          "name": "Videonistagmografía",
+          "alternateName": ["VNG", "Estudio vestibular"],
+          "description": "Evaluación del equilibrio y del sistema vestibular mediante registro de movimientos oculares.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "position": 6,
+          "name": "Videoelectroencefalograma (Video-EEG)",
+          "alternateName": ["Video EEG", "Video-EEG"],
+          "description": "Registro EEG sincronizado con video.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalTherapy",
+          "position": 7,
+          "name": "Tratamiento del Dolor",
+          "alternateName": ["Tratamiento del dolor crónico", "Infiltraciones"],
+          "description": "Tratamiento de hernias de disco, síndrome de túnel carpiano y dolor de hombros, caderas y rodillas.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        },
+        {
+          "@type": "MedicalTherapy",
+          "position": 8,
+          "name": "Ozonoterapia",
+          "alternateName": ["Ozono terapia", "Terapia con ozono", "Ozonoterapia médica", "Ozone therapy"],
+          "description": "Tratamiento con ozono médico para herpes zóster, artritis, artrosis y patologías de nervios periféricos. También conocido como ozono terapia.",
+          "provider": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.centrodeneurologia.com.ar/#website",
+      "url": "https://www.centrodeneurologia.com.ar/",
+      "name": "Centro de Neurología",
+      "alternateName": "Centro de Neurología Venado Tuerto",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://www.centrodeneurologia.com.ar/#centro" }
+    }
+  ]
+}
+</script>
     <script src="./analytics-events.js" defer></script>
   </head>
 
